@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>Giá Hoa Quả</h1>
+<input type="text" id="txt">
+<button onclick="check()">Xem Giá</button>
+<h3 id="rs"></h3>
+<body>
+    <script>
+    
+        function check() {
+            let str = document.getElementById('txt').value;
+            let result = '';
+            {
+            if(str == "Ổi"){
+                result = '20000 VND/kg';
+            }
+            if (str == "Dưa hấu") {
+                result = '10000 VND/kg';
+            }
+        }
+            document.getElementById('rs').innerHTML = result;
+    }
+    </script>
+
+
+</body>
+</html>

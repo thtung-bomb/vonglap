@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p>TÍNH ĐIỂM ĐẠI HỌC</p>
+Môn Toán <input type="text" name="" id="mat"><br>
+Môn Văn <input type="text" name="" id="lit"><br>
+Môn Anh <input type="text" name="" id="eng"><br>
+<label for="place">Khu vực</label>
+<select id="pla" name="pla">
+    <option value="KV1">KV1</option>
+    <option value="KV2">KV2</option>
+    <option value="KV2-NT">KV2-NT</option>
+    <option value="KV3">KV3</option>
+</select> <br>
+<button onclick="tinhdiem()">Tính điểm</button>
+<p id="rs"></p>
+
+<body>
+    <script>
+        function tinhdiem() {
+            let toan = +document.getElementById('mat').value;
+            let van = +document.getElementById('lit').value;
+            let anh = +document.getElementById('eng').value;
+            let selected = document.getElementById('pla').value;
+            let result = toan + van + anh;            
+
+            switch (selected) {
+                case 'KV1':
+                    result += 0.75;
+                    break;
+                case 'KV2':
+                    result += 0.25;
+                    break;
+                case 'KV2-NT':
+                    result += 0.5;
+                    break;
+                default:
+                    break;
+            }
+            document.getElementById('rs').innerHTML = result;
+        }
+            alert.getElementById('rs').innerHTML = result;
+    </script>
+</body>
+
+</html>
